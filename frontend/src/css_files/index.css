@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(#9558b8, #ffffff);
+}
+
+.App h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+nav ul li {
+  font-weight: 700;
+  padding: 5px;
+  background-color: #ffffff;
+  color: #9558b8;
+}
+nav ul :hover {
+  background-color: #9558b8;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=index.css.map */

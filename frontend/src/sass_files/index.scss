@@ -1,0 +1,48 @@
+@import "config";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient($primary-background, $secondary-background);
+
+}
+
+.App {
+    h1 {
+        text-align: center;
+        margin: 20px;
+
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        li {
+            font-weight: 700;
+            padding: 5px;
+            background-color: $secondary-background;
+            color: $primary-background;
+        }
+
+        :hover {
+            background-color: $primary-background;
+            color: $secondary-background;
+        }
+    }
+
+
+}
