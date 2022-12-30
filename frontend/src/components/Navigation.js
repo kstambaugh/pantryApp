@@ -4,10 +4,10 @@ export const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li><a href="#">option 1</a></li>
-                <li><a href="#">option 2</a></li>
-                <li><a href="#">option 3</a></li>
-                <li><a href="#">option 4</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Pantry</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Grocery List</a></li>
             </ul>
         </nav>
 
