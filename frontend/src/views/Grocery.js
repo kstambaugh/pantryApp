@@ -1,8 +1,10 @@
 import React from "react";
 
-export const Grocery = () => {
+const Grocery = () => {
 
     return (
         <h1>Grocery</h1>
     )
 }
+
+export default Grocery
