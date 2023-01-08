@@ -3,18 +3,7 @@ const app = express()
 const dotenv = require('dotenv')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const Sequelize = require('sequelize')
-const sequelize = require('./database')
 dotenv.config()
-
-sequelize.sync({ alter: true })
-    .then((res) => {
-        console.log('models synced with database', res)
-    })
-    .catch(err => {
-        console.error('error syncing models', err)
-    })
-
 
 
 
