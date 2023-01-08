@@ -20,10 +20,6 @@ module.exports = {
       meal_date: {
         type: Sequelize.DATE
       },
-      user_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER
-      }
     });
   },
   async down(queryInterface, Sequelize) {

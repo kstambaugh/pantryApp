@@ -2,6 +2,9 @@
 const {
   Model
 } = require('sequelize');
+const meal_plan = require('./meal_plan');
+const recipe_ingredients = require('./recipe_ingredients');
+const user = require('./user');
 module.exports = (sequelize, DataTypes) => {
   class Recipe extends Model {
     /**
@@ -11,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Recipe.hasOne(recipe_ingredients)
+      Recipe.belongsTo(user)
+      Recipe.belongsTo(meal_plan)
     }
   }
   Recipe.init({
