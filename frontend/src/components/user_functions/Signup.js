@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+
 
 const SignUp = () => {
+
+    const [user, setUser] = useState({
+        first_Name: "",
+        last_Name: "",
+        email_address: "",
+        password: "",
+    })
+    const [error, setError] = useState('')
+
+    const handleInputChange = (event) => {
+        event.preventDefault()
+        setUser(event.target.value)
+
+    }
+
+
 
     return (
         <div>
@@ -10,7 +27,7 @@ const SignUp = () => {
                     <label htmlFor="firstName"> First Name</label>
                     <input
                         required
-                        value={""}
+                        defaultValue={''}
                         id="firstName"
                         name="firstName"
                     />
@@ -19,7 +36,7 @@ const SignUp = () => {
                     <label htmlFor="lastName"> Last Name</label>
                     <input
                         required
-                        value={""}
+                        defaultValue={''}
                         id="lastName"
                         name="lastName"
                     />
@@ -28,7 +45,7 @@ const SignUp = () => {
                     <label htmlFor="emailAddress"> Email</label>
                     <input
                         required
-                        value={""}
+                        defaultValue={''}
                         id="emailAddress"
                         name="emailAddress"
                     />
@@ -37,7 +54,7 @@ const SignUp = () => {
                     <label htmlFor="password"> Password</label>
                     <input
                         required
-                        value={""}
+                        defaultValue={''}
                         id="password"
                         name="password"
                     />
@@ -46,7 +63,7 @@ const SignUp = () => {
                     <label htmlFor="passwordConfirm"> Confirm Password</label>
                     <input
                         required
-                        value={""}
+                        defaultValue={''}
                         id="passwordConfirm"
                         name="passwordConfirm"
                     />

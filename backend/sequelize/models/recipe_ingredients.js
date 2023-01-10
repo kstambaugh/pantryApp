@@ -13,11 +13,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Recipe_Ingredients.belongsToMany(user_ingredients)
-      Recipe_Ingredients.belongsTo(recipe)
+      // Recipe_Ingredients.belongsToMany(user_ingredients)
+      // Recipe_Ingredients.belongsTo(recipe)
     }
   }
   Recipe_Ingredients.init({
+    recipe_ingredient_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     recipe_id: DataTypes.INTEGER,
     ingredient_id: DataTypes.INTEGER,
     amount_used: DataTypes.INTEGER,
@@ -25,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Recipe_Ingredients',
+    timestamps: false,
   });
   return Recipe_Ingredients;
 };

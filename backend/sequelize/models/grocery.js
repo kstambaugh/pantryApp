@@ -13,17 +13,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Grocery.hasMany(user_ingredients)
-      Grocery.belongsTo(user, { through: user_ingredients })
+      // Grocery.hasMany(user_ingredients)
+      // Grocery.belongsTo(user, { through: user_ingredients })
     }
   }
   Grocery.init({
+    grocery_ingredient_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     ingredient_id: DataTypes.INTEGER,
     date_add: DataTypes.DATE,
     date_needed: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Grocery',
+    timestamps: false,
   });
   return Grocery;
 };

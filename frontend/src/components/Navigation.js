@@ -27,8 +27,9 @@ export const Navigation = () => {
                 <li><a href="#" onClick={() => navigate('/')}>Home</a></li>
                 <li><a href="#" onClick={() => navigate('/menu')}>Menu</a></li>
                 <li><a href="#" onClick={() => navigate('/pantry')}>Pantry</a></li>
-                <li><a href="#" onClick={() => navigate('/recipes')}>Recipes</a></li>
                 <li><a href="#" onClick={() => navigate('/grocery')}>Grocery List</a></li>
+                <li><a href="#" onClick={() => navigate('/recipes')}>Recipes</a></li>
+                <li><a href="#" onClick={() => navigate('/ingredients')}>My Ingredients</a></li>
             </ul>
             {loginActions}
         </nav>

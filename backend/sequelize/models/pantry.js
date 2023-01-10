@@ -13,17 +13,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Pantry.hasMany(user_ingredients)
-      Pantry.belongsTo(user, { through: user_ingredients })
+      // Pantry.hasMany(user_ingredients)
+      // Pantry.belongsTo(user, { through: user_ingredients })
     }
   }
   Pantry.init({
+    pantry_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     ingredient_id: DataTypes.INTEGER,
     amount_on_hand: DataTypes.INTEGER,
     unit_of_measure: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Pantry',
+    timestamps: false,
   });
   return Pantry;
 };

@@ -8,6 +8,7 @@ import Grocery from "./views/Grocery";
 import Menu from "./views/Menu";
 import Pantry from "./views/Pantry";
 import Recipes from "./views/Recipes";
+import Ingredients from "./views/Ingredients";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/menu" element={Menu()} />
           <Route exact path="/pantry" element={Pantry()} />
           <Route exact path="/recipes" element={Recipes()} />
+          <Route exact path="/ingredients" element={Ingredients()} />
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>

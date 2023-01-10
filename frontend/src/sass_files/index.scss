@@ -14,14 +14,12 @@ html {
 
 body {
     background: linear-gradient($primary-background, $secondary-background);
-
 }
 
 .App {
     h1 {
         text-align: center;
         margin: 20px;
-
     }
 }
 
@@ -43,6 +41,5 @@ nav {
             color: $secondary-background;
         }
     }
-
 
 }

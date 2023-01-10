@@ -14,7 +14,7 @@ app.use(cors({
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-
+app.use('/users', require('./controllers/users_controller'))
 
 app.get('/', function (req, res) {
     res.send('hello world');

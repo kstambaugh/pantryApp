@@ -15,15 +15,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Users.hasMany(user_ingredients)
-      Users.hasMany(pantry, { through: user_ingredients })
-      Users.hasMany(recipe)
-      Users.hasMany(grocery, { through: user_ingredients })
+      // Users.hasMany(user_ingredients)
+      // Users.hasMany(pantry, { through: user_ingredients })
+      // Users.hasMany(recipe)
+      // Users.hasMany(grocery, { through: user_ingredients })
 
 
     }
   }
   Users.init({
+    user_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     first_Name: DataTypes.STRING,
     last_Name: DataTypes.STRING,
     email_address: DataTypes.STRING,
@@ -31,6 +35,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Users',
+    timestamps: false,
   });
   return Users;
 };

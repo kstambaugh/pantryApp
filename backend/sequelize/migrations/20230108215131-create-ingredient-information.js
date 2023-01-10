@@ -13,6 +13,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
+      catagory_id: {
+        type: Sequelize.STRING
+      },
       date_of_last_use: {
         type: Sequelize.DATE
       },

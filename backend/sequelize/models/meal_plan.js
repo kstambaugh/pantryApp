@@ -12,16 +12,21 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Meal_Plan.hasMany(recipe)
+      // Meal_Plan.hasMany(recipe)
     }
   }
   Meal_Plan.init({
+    meal_plan_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     recipe_id: DataTypes.INTEGER,
     meal_type: DataTypes.STRING,
     meal_date: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'Meal_Plan',
+    timestamps: false,
   });
   return Meal_Plan;
 };
